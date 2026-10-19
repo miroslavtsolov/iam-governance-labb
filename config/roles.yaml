@@ -1,0 +1,27 @@
+# RBAC model for FinApp. Roles are assigned automatically from HR attributes
+# (like ISC role membership criteria / IIQ role assignment rules).
+roles:
+  finance-accountant:
+    description: Accountants - ledger read/write
+    match: {department: Finance, job_title: Accountant}
+    entitlements: [ledger_read, ledger_post]
+  finance-ap-clerk:
+    description: Accounts payable clerks - ledger read, vendor maintenance
+    match: {department: Finance, job_title: AP Clerk}
+    entitlements: [ledger_read, vendor_create]
+  finance-manager:
+    description: Finance managers - ledger read, approve payments
+    match: {department: Finance, job_title: Finance Manager}
+    entitlements: [ledger_read, payment_approve]
+  sales-user:
+    description: Everyone in Sales - CRM access
+    match: {department: Sales}
+    entitlements: [crm_read, crm_edit]
+  hr-user:
+    description: HR staff - HR records
+    match: {department: HR}
+    entitlements: [hr_records]
+  it-systems-admin:
+    description: Systems engineers - FinApp administration
+    match: {department: IT, job_title: Systems Engineer}
+    entitlements: [admin_console]

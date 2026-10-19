@@ -1,0 +1,7 @@
+.venv/
+.run/
+engine/out/
+app/finapp.db
+connector/node_modules/
+connector/dist/
+__pycache__/

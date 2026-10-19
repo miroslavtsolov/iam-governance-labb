@@ -1,0 +1,51 @@
+{
+  "name": "finapp-connector",
+  "commands": [
+    "std:test-connection",
+    "std:account:list",
+    "std:account:read",
+    "std:account:create",
+    "std:account:update",
+    "std:account:delete",
+    "std:account:enable",
+    "std:account:disable",
+    "std:entitlement:list"
+  ],
+  "sourceConfig": [
+    {
+      "type": "menu",
+      "label": "Configuration",
+      "items": [
+        {
+          "type": "section",
+          "sectionTitle": "Connection",
+          "items": [
+            { "key": "baseUrl", "label": "FinApp base URL", "type": "text", "required": true }
+          ]
+        }
+      ]
+    }
+  ],
+  "accountSchema": {
+    "displayAttribute": "username",
+    "identityAttribute": "username",
+    "attributes": [
+      { "name": "username", "type": "string", "description": "Login name" },
+      { "name": "email", "type": "string", "description": "Email address" },
+      { "name": "employee_id", "type": "string", "description": "HR employee ID (may be empty)" },
+      { "name": "entitlements", "type": "string", "entitlement": true, "managed": true, "multi": true, "description": "FinApp permissions" }
+    ]
+  },
+  "entitlementSchemas": [
+    {
+      "type": "entitlement",
+      "identityAttribute": "id",
+      "displayAttribute": "id",
+      "attributes": [
+        { "name": "id", "type": "string", "description": "Entitlement ID" },
+        { "name": "description", "type": "string", "description": "What it allows" },
+        { "name": "privileged", "type": "boolean", "description": "Privileged permission" }
+      ]
+    }
+  ]
+}

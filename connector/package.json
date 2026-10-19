@@ -1,0 +1,18 @@
+{
+  "name": "finapp-connector",
+  "version": "0.1.0",
+  "description": "Lab SaaS connector for FinApp, built with the SailPoint Connector SDK",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "spcx dist/index.js 3000",
+    "package": "npm run build && spcx package"
+  },
+  "dependencies": {
+    "@sailpoint/connector-sdk": "^1.2.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.4.0"
+  }
+}

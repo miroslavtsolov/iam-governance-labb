@@ -1,0 +1,8 @@
+# Segregation-of-duties policies: one account must never hold both entitlements.
+policies:
+  - name: Vendor maintenance vs payment approval
+    conflict: [vendor_create, payment_approve]
+    rationale: One person could create a fake vendor and approve payment to it.
+  - name: Ledger posting vs payment approval
+    conflict: [ledger_post, payment_approve]
+    rationale: Posting and approving the same financial transaction.

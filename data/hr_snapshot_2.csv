@@ -1,0 +1,13 @@
+employee_id,first_name,last_name,email,department,job_title,manager_id,status
+1001,Anna,Petrova,anna.petrova@corp.example,Finance,Accountant,1010,active
+1002,Boris,Ivanov,boris.ivanov@corp.example,Sales,Sales Rep,1040,active
+1003,Clara,Dimitrova,clara.dimitrova@corp.example,IT,Systems Engineer,1020,active
+1004,Daniel,Georgiev,daniel.georgiev@corp.example,IT,IAM Analyst,1020,terminated
+1005,Elena,Todorova,elena.todorova@corp.example,HR,HR Partner,1030,active
+1006,Filip,Stoyanov,filip.stoyanov@corp.example,Sales,Account Manager,1040,active
+1007,Gergana,Koleva,gergana.koleva@corp.example,Sales,Sales Rep,1040,active
+1010,Hristo,Marinov,hristo.marinov@corp.example,Finance,Finance Manager,1099,active
+1020,Ivan,Popov,ivan.popov@corp.example,IT,IT Manager,1099,active
+1030,Julia,Nikolova,julia.nikolova@corp.example,HR,HR Manager,1099,active
+1040,Kiril,Angelov,kiril.angelov@corp.example,Sales,Sales Manager,1099,active
+1008,Lilia,Hristova,lilia.hristova@corp.example,Finance,Accountant,1010,active
